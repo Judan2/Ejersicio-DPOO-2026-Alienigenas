@@ -19,23 +19,16 @@ public class Main
 	
 	public static int sumaruno(int a) 
 	{
-		int b = a++;
-		System.out.println(a);
-		System.out.println(b);
-		return b;
+		a++;
+		return a;
 	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		System.out.println(sumar(nota,nota2));
 		
 		System.out.println(sumaruno(3));
-		
-		for(String item:nombres) 
-		{
-			System.out.println(item);
-		}
+	
 
 	}
 		
