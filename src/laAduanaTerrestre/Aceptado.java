@@ -1,5 +1,31 @@
 package laAduanaTerrestre;
+import java.util.Random;
+//import java.util.random.*;
+public class Aceptado extends DestinoFinal{
+	private int numeroVisa;
+	private String regalo;
 
-public class Aceptado {
+	public Aceptado() {
+		super();
+		Random r = new Random();
+		this.numeroVisa = 100_000+ r.nextInt();
+		this.regalo = "Globos y Tiramisu";
+	}
+	@Override
+	public String reubicar() {
+		// TODO Auto-generated method stub
+		return "Bienvenido a la Tierra";
+	}
+	
+	public String getRegalo() {
+		return regalo;
+		
+	}
+
+	public int getNumeroVisa() {
+		return numeroVisa;
+	}
+
+	
 
 }

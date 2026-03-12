@@ -1,11 +1,99 @@
 package laAduanaTerrestre;
-import java.util.ArrayList;
+import java.util.HashMap;
 
-
-
-//primero necesito la lista la recorro y despues entro el atributo pasaporte y ahi verifico 
-//esto sera la entidad de control 
 public class Proceso {
+	//private ArrayList<Alienigena> listaAlienigenas;
+	private Alienigena alien;
+	//private HashMap<String,Boolean> damediccionario;
+	
+	public Proceso(Alienigena alien) {
+		super();
+		this.alien= alien;
+		
+		
+	}
+	
+	
+	public boolean EsAutentico() {
+		// que lo hace falso o que lo hace autentico
+		
+		
+		String codigo = alien.getCodigoPasaporte();
+		char ultimaletra = alien.getCodigoPasaporte().charAt(codigo.length()-1);
+			
+			//que neesito saber aca necesito si el numero
+			// sabemos que si el numero es mayor a 6 es falso el pasaporte
+			if (codigo.length() > 6 || ultimaletra == '0' ) {
+				return false;
+   			}
+			else {
+				return true;
+			}
+		
+		
+
+	
+	}
+	public boolean EsPeligroso() {
+		//ArrayList<Alienigena> listaPeligrosos = new ArrayList<>();
+		
+		tipoAlienigena clasificacion = alien.getClasificacion();
+		double radiacion = alien.getNivelRadiacion();
+		int cantTentaculos = alien.getCantidadtentaculos();
+			if (clasificacion == tipoAlienigena.FUEGO || cantTentaculos > 4 || radiacion > 50.5 ){
+				return true;
+			}
+			else {
+				return false;
+			}
+				// como indetifico que es peligroso 
+		// si tiene mas de 4 tentaculos es peligro 
+		// y si es mejor 
+		
+		}
+		
+		
+	
+	
+	
+
+	
+	
+/**
+	public boolean espeligroso(Alienigena alien)
+	{
+	
+		// el alien es peligroso si el nivel de radiacion es mayor a 50.5 y tiene mas de 6 tentaculos
+		if (alien.getNivelRadiacion() > 50.5 || alien.isCantidadtentaculos()> 6){
+			return true;
+		}
+		else if(pasaporte == null || pasaporte.length() < 5) {
+            System.out.println("Pasaporte inválido. Deportado.");
+            return; ) {
+			
+		}
+		
+		else {
+			return false;
+		}
+	}
+		//si el pasaporte es falso 
+	
+	// que me van a traer de 
+	//recibo uno a la vez por lo que o recibo un lista = una lista
+	public boolean pasaporteVeridico(Alienigena alien) 
+	{
+		
+		String codigo = alien.getCodigoPasaporte();
+		// no lo podria hacer a fuera el codio antes de entrar a el for 
+		
+		for alien in alien.getCodigoPasaporte(){
+			
+		}
+	}
+	
+	
+	public class Proceso {
 	private ArrayList<Alienigena> listaAlienigenas;
 
 	public Proceso(ArrayList<Alienigena> listaAlienigenas) {
@@ -52,47 +140,6 @@ public class Proceso {
 		// si tiene mas de 4 tentaculos es peligro 
 		// y si es mejor 
 		return listaPeligrosos;
-		}
-		
-		
-	
-	
-	
-
-	
-	
-/**
-	public boolean espeligroso(Alienigena alien)
-	{
-	
-		// el alien es peligroso si el nivel de radiacion es mayor a 50.5 y tiene mas de 6 tentaculos
-		if (alien.getNivelRadiacion() > 50.5 || alien.isCantidadtentaculos()> 6){
-			return true;
-		}
-		else if(pasaporte == null || pasaporte.length() < 5) {
-            System.out.println("Pasaporte inválido. Deportado.");
-            return; ) {
-			
-		}
-		
-		else {
-			return false;
-		}
-	}
-		//si el pasaporte es falso 
-	
-	// que me van a traer de 
-	//recibo uno a la vez por lo que o recibo un lista = una lista
-	public boolean pasaporteVeridico(Alienigena alien) 
-	{
-		
-		String codigo = alien.getCodigoPasaporte();
-		// no lo podria hacer a fuera el codio antes de entrar a el for 
-		
-		for alien in alien.getCodigoPasaporte(){
-			
-		}
-	}
 **/
 	
 
