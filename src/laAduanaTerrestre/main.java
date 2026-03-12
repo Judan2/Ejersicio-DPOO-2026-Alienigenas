@@ -39,7 +39,7 @@ public class main {
 		Alienigena a = new Alienigena(nombre, especie, tipo, pasaporte, lunas, tentaculos, radiacion);
 		
 		Proceso p1 = new Proceso(a);
-		CalculoImpuestos c1 = new CalculoImpuestos(organismo2);
+		Impuesto c1 = new Impuesto(organismo2);
 			if (!p1.EsAutentico()) {
 		        Deportado d = new Deportado(tipoTransporte.Phantom, a.getNombreEspecie());
 		        System.out.println(a.getNombre() + " deportado a: " + d.reubicar());

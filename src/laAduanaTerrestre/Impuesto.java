@@ -2,7 +2,7 @@ package laAduanaTerrestre;
 //import java.util.HashMap;
 //import java.util.ArrayList;
 //quedo tan hermoso 
-public class CalculoImpuestos 
+public class Impuesto 
 {
 	//private ArrayList<Alienigena> listaAlienigenas;
 	//protected HashMap<Alienigena,Double> mapaImpuestos ;
@@ -16,7 +16,7 @@ public class CalculoImpuestos
 	
 	
 	
-	public CalculoImpuestos( Alienigena alien) {
+	public Impuesto( Alienigena alien) {
 		super();
 	this.alien = alien;
 		
@@ -38,20 +38,20 @@ public class CalculoImpuestos
 			impuesto+= lunas* IMPUESTO_FUEGO;
 		}
 		if(clase == tipoAlienigena.ACUATICO) {
-			impuesto+= lunas*CalculoImpuestos.IMPUESTO_AGUA;
+			impuesto+= lunas*Impuesto.IMPUESTO_AGUA;
 		}
 		if (tentaculos > 3) {
-			impuesto+= CalculoImpuestos.IMPUESTO_TENTACULO;
+			impuesto+= Impuesto.IMPUESTO_TENTACULO;
 			
 		}//radiacion 
 		if (radiacion > 25.25) {
 			impuesto+= 125.2;	
 		}
 		if (clase==tipoAlienigena.CIBERBORD) {
-			impuesto+= CalculoImpuestos.IMPUESTO_CIBERNETICO;
+			impuesto+= Impuesto.IMPUESTO_CIBERNETICO;
 		}
 		if (clase==tipoAlienigena.GASEOSO) {
-			impuesto+= CalculoImpuestos.IMPUESTO_GASEOSO;
+			impuesto+= Impuesto.IMPUESTO_GASEOSO;
 		}
 		// falta el alien cuantico que no paga impuestos 
 		
