@@ -53,6 +53,9 @@ public class Impuesto
 		if (clase==tipoAlienigena.GASEOSO) {
 			impuesto+= Impuesto.IMPUESTO_GASEOSO;
 		}
+		if (clase == tipoAlienigena.HUMANOIDE || clase == tipoAlienigena.HUMANO) {
+		    impuesto += lunas * 5.0;
+		}
 		// falta el alien cuantico que no paga impuestos 
 		
 		

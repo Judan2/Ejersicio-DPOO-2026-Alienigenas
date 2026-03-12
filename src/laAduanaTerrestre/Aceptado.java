@@ -14,7 +14,7 @@ public class Aceptado extends DestinoFinal{
 	@Override
 	public String reubicar() {
 		// TODO Auto-generated method stub
-		return "Bienvenido a la Tierra";
+		return "El majestuaoso Planeta Tierra";
 	}
 	
 	public String getRegalo() {

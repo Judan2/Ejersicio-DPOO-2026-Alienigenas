@@ -39,7 +39,7 @@ public class main {
 		Alienigena a = new Alienigena(nombre, especie, tipo, pasaporte, lunas, tentaculos, radiacion);
 		
 		Proceso p1 = new Proceso(a);
-		Impuesto c1 = new Impuesto(organismo2);
+		Impuesto c1 = new Impuesto(a);
 			if (!p1.EsAutentico()) {
 		        Deportado d = new Deportado(tipoTransporte.Phantom, a.getNombreEspecie());
 		        System.out.println(a.getNombre() + " deportado a: " + d.reubicar());
@@ -53,8 +53,11 @@ public class main {
 			else {
 				
 				Aceptado ac = new Aceptado();
-		        System.out.println(a.getNombre() + " aceptado. Visa: " + ac.getNumeroVisa());
-		        System.out.println("Impuesto: " + c1.impuestoTipo());
+				
+		        System.out.println(a.getNombre() + " ha sido Aceptado. Su numero de Visa será: " + ac.getNumeroVisa());
+		        System.out.println("El Impuesto a pagar es: " + c1.impuestoTipo());
+		        System.out.println("El consulado de la Tierra sede en Roma lo saluda y le desea una bienvenida a " + ac.reubicar());
+		        System.out.println("De regalo de bienvenida le ofrecemos " + ac.getRegalo());
 				// crear aceptado
 		        
 		    sc.close();
