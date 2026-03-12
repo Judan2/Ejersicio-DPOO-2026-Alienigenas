@@ -42,13 +42,15 @@ public class main {
 		Impuesto c1 = new Impuesto(a);
 			if (!p1.EsAutentico()) {
 		        Deportado d = new Deportado(tipoTransporte.Phantom, a.getNombreEspecie());
-		        System.out.println(a.getNombre() + " deportado a: " + d.reubicar());
+		        System.out.println(a.getNombre() + " ha sido deportado/a a: " + d.reubicar());
+		        System.out.println(a.getNombre()+" paga en impuestos "+ c1.impuestoTipo());
 		        
 			}else if (p1.EsPeligroso()) {
 				//crear detencion 
 				Detencion det = new Detencion(a.getClasificacion());
-		        System.out.println(a.getNombre() + " detenido en: " + det.reubicar());
-
+		        System.out.println(a.getNombre() + " ha sido deportado/a a: " + det.reubicar());
+		        System.out.println(a.getNombre()+ "paga en impuestos "+ c1.impuestoTipo());
+		        
 			}
 			else {
 				
