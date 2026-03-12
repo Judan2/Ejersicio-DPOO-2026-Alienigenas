@@ -8,7 +8,7 @@ public class Aceptado extends DestinoFinal{
 	public Aceptado() {
 		super();
 		Random r = new Random();
-		this.numeroVisa = 100_000+ r.nextInt();
+		this.numeroVisa = 100_000+ r.nextInt(900_000);
 		this.regalo = "Globos y Tiramisu";
 	}
 	@Override

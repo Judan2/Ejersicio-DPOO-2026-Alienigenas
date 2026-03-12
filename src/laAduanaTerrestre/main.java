@@ -10,8 +10,8 @@ public class main {
 		//Alienigena organismo3 = new Alienigena("Jerome","Hummano",tipoAlienigena.HUMANO,"AW1107",1,0,0.23);
 		//Alienigena organismo4 = new Alienigena("Alice", "Transformers", tipoAlienigena.CIBERBORD,"PU3425",0,0,2.1);
 		//Alienigena organismo5 = new Alienigena("Calamardo","Pulpo",tipoAlienigena.ACUATICO,"CU1278",1,6,1.2);
+		
 		Scanner sc = new Scanner(System.in);
-
 		System.out.println("Ingresa el nombre: ");
 		String nombre = sc.nextLine();
 
@@ -56,7 +56,9 @@ public class main {
 		        System.out.println(a.getNombre() + " aceptado. Visa: " + ac.getNumeroVisa());
 		        System.out.println("Impuesto: " + c1.impuestoTipo());
 				// crear aceptado
-			}
+		        
+		    sc.close();
+			}// muchas responsabilidades en un solo metodo viola el Solid Responsability 
 		}
 	}
 	/**
